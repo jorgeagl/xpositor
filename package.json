@@ -1,0 +1,22 @@
+{
+    "name": "presentacion",
+    "version": "0.1.0",
+    "author": "Jorge Leon",
+    "homepage": "",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "jade": "",
+        "express": "",
+        "socket.io": ""
+    },
+    "subdomain": "presentacion",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "engines": {
+        "node": "0.10.x"
+    }
+}

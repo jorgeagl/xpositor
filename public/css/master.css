@@ -1,0 +1,70 @@
+
+body {
+    font-family: monospace;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    margin: 1em;
+}
+
+#slides {
+    font-size: 150%;
+    top: 25%;
+}
+
+.slide {
+    display: none;
+    vertical-align: middle;
+    padding: 3em;
+}
+
+.active {
+    display: inline-block;
+}
+
+.slide .speaker {
+    display: none;
+}
+
+
+#manage {
+    text-align: center;
+}
+
+#manage #speaker-note {
+    text-align: left;
+}
+
+#manage h1 {
+    font-size: 3em;
+}
+
+#manage button {
+    width: 45%;
+    height: 100px;
+}
+
+
+#footer {
+    font-size: 2em;
+    position: absolute;
+    bottom: 0px;
+}
+
+#footer-right {
+    font-size: 1em;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+#footer-right * {
+    color: red;
+}
