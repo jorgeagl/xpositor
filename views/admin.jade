@@ -1,0 +1,15 @@
+script(src="/lib/jquery.min.js", type="text/javascript", charset="utf-8")
+script(src="/lib/admin.js", type="text/javascript", charset="utf-8")
+script(src="/lib/ckeditor/ckeditor.js", type="text/javascript", charset="utf-8")
+script(type="text/javascript")
+div(class="col-md-12") HEADER
+
+div(class="col-md-1")
+	div(class="alert alert-info") pagina-1
+div(class="col-md-10")
+	form 
+		textarea(id="ckeditor", name="editor1", class="ckeditor")
+		div(class="col-md-12")
+			button(class="btn btn-primary btn-lg push-right submit")
+				span PREVIEW 
+div(class="preview col-md-10 col-md-offset-1")

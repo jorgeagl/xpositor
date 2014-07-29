@@ -15,9 +15,18 @@ http.createServer(function (req, res) {
 var express = require("express");
 var app = express.createServer();
 var io = require('socket.io').listen(app);
+var html2jade = require('html2jade');
+var fs  = require("fs");
 
+app.configure(function(){
+  app.use('/public', express.static(__dirname + '/public'));  
+  app.use(express.static(__dirname + '/public'));
+  app.use(express.bodyParser());
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+  //app.use(express.urlencoded());
+  //app.use(express.json()); 
+});
 
-app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
   res.render('slides.jade');
@@ -25,6 +34,28 @@ app.get('/', function(req, res){
 
 app.get('/manage', function(req, res){
   res.render('manage.jade');
+});
+
+app.get('/admin', function(req, res){
+  res.render('admin.jade');
+});
+
+app.post('/convert', function(req, res){
+  html2jade.convertHtml(req.body.html, {bodyless:true}, function (err, jade) { //CONVERT TO JADE
+          
+    fs.appendFile('./views/pagina.jade', jade, function(err){
+      if(!err){
+        
+        res.send({success:1});
+        
+        res.end();  
+      }else{
+        res.send(500, { error: err });
+        throw err;
+      }
+    });
+  });
+  
 });
 
 
