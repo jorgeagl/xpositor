@@ -2,14 +2,28 @@ script(src="/lib/jquery.min.js", type="text/javascript", charset="utf-8")
 script(src="/lib/admin.js", type="text/javascript", charset="utf-8")
 script(src="/lib/ckeditor/ckeditor.js", type="text/javascript", charset="utf-8")
 script(type="text/javascript")
-div(class="col-md-12") HEADER
+div(class="col-md-12 header-admin")
+	button(class="btn btn-primary pull-right saveAll")
+		span GUARDAR
+		span(class="glyphicon glyphicon-globe saveadmin")
 
-div(class="col-md-1")
-	div(class="alert alert-info") pagina-1
-div(class="col-md-10")
+div(class="col-md-2 admin-left")
+	ul
+		li PAGINAS
+			span(class="glyphicon glyphicon-plus-sign pull-right add")
+		li#1 
+			span(class="glyphicon glyphicon-list-alt") 
+			span(class="paginas-admin") PAGINA-1
+		li#2
+			span(class="glyphicon glyphicon-list-alt") 
+			span(class="paginas-admin") PAGINA-2
+	
+div(class="col-md-10 body-admin")
 	form 
 		textarea(id="ckeditor", name="editor1", class="ckeditor")
 		div(class="col-md-12")
 			button(class="btn btn-primary btn-lg push-right submit")
 				span PREVIEW 
-div(class="preview col-md-10 col-md-offset-1")
+div(class="preview col-md-10 col-md-offset-2")
+
+#slide

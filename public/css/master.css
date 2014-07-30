@@ -68,3 +68,56 @@ li {
 #footer-right * {
     color: red;
 }
+
+/* ADMIN */
+
+.header-admin{ background-color: #222222; padding:10px 0; }
+.admin-left{
+    background-color: #222222;
+    position: fixed;
+    padding:0 !important;
+    background-image: url('./img/body-linen.jpg');    
+    background-position: left top;
+    height: 100%;
+}
+
+.admin-left ul{ margin:0 !important;padding: 0 !important;}
+.admin-left li{
+    cursor: pointer;
+    padding:10px !important;
+    margin: 0 !important;
+    list-style-type: none;
+    border-top:1px solid rgba(255, 255, 255, 0.30); 
+    border-bottom:1px solid rgba(255, 255, 255, 0.30); 
+}
+.admin-left a{ cursor: pointer; }
+
+.admin-left li:nth-child(1){
+    color:#FFFFFF; 
+    border:#222222 !important;
+    padding: 10px !important;
+}
+
+.admin-left .activo{ 
+    color:#05A0CB;
+    background-color: #2b2d36;
+    
+}
+.admin-left li:hover:nth-child(1){
+    border: medium none #222222 !important;
+    color: #ffffff;
+}
+.admin-left li:hover{
+    color:#05A0CB;
+    background-color: #2b2d36;
+    
+}
+.admin-left li{ color:#056D89; padding-left: 40px !important;}
+
+.admin-left .add{ cursor: pointer;}
+
+.body-admin{ padding:0 !important;}
+
+.saveadmin{ padding:0 10px !important; }
+
+.paginas-admin{ padding:0 10px;}
