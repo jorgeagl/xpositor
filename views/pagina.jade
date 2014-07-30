@@ -1,60 +1,365 @@
-h1 Utilizar imagenes vectoriales en Android
-p(style='text-align:justify')
-  img.aligncenter.size-full.wp-image-10014(alt='Android_SVG', src='http://i2.wp.com/geekytheory.com/wp-content/uploads/2014/07/Android_SVG.png?resize=1024%2C640', style='height:481px; width:770px')
-  br
-  | El networking es vital en el mundo del software, y desde Geeky Theory siempre lo hemos incentivado y hemos intentado ser participes de ello, como todas las charlas a las que asistimos y/o las que nosotros damos. En esta clase de evento se aprenden cosas que de otra manera muy dif&iacute;cilmente podr&iacute;amos acceder o conocer.
-p(style='text-align:justify')
-  | En uno de estos evento comentaba un ponente y amigo 
-  a(href='https://plus.google.com/+TxusBallesteros', target='_blank', title='Perfil de gplus de Txus') Txus Ballesteros
-  |  la utilizaci&oacute;n de este formato de im&aacute;genes para la utilizaci&oacute;n como iconos en aplicaciones Android. La causa de la utilizaci&oacute;n de este formato es su potencia de reutilizaci&oacute;n puesto que es vectorial y no matricial.
-.alert
-  | Los que no sep&aacute;is de que va esto, resumir que un 
-  a(href='http://es.wikipedia.org/wiki/Scalable_Vector_Graphics', target='_blank', title='SVG en wikipedia') SVG
-  |  se puede considerar una funci&oacute;n, por lo que puede ser redimensionada todo lo que se quiera al no estar generada por pixeles
-p(style='text-align:justify')
-  | Para los que hab&eacute;is pasado por un desarrollo en Android un poco serio, os habr&eacute;is topado por la adaptaci&oacute;n de vuestros recursos para diferentes terminales, con la 
-  strong repetici&oacute;n del misma imagen de icono para cada una de las densidades
-  |  hdpi,mdpi,ldpi,xhdpi,&mldr; aumentando much&iacute;simo el peso de la aplicaci&oacute;n final.
-p(style='text-align:justify')
-  | Con la utilizaci&oacute;n de los SVG reducimos ese peso, y el de la RAM en muchos casos teniendo solamente un &uacute;nico recurso que ser&aacute; el SVG que reescalaremos para cada caso.
-p(style='text-align:justify')
-  | Para su utilizaci&oacute;n en Android, 
-  a(href='https://github.com/japgolly/svg-android', target='_blank', title='Librería de uso de SVG en Android') haremos uso de una librer&iacute;a
-  |  que nos facilitar&aacute; pintar &ldquo;esa funci&oacute;n&rdquo; en nuestra aplicaci&oacute;n.
-p(style='text-align:justify')
-  | La imagen SVG podremos dibujarla con cualquier editor de im&aacute;genes vectoriales, yo os aconsejo Adobe Illustrator o su homologo open source Inksacape.
-p(style='text-align:justify')
-  | Como curiosidad os paso el contenido del archivo de ejemplo, esto es lo que nos encontramos si abrimos un .svg con un editor de texto. Como podemos ver, es texto plano, &ldquo;una funci&oacute;n&rdquo; que dice como pintar la imagen.
-h1 Utilizar imagenes vectoriales en Android
-p(style='text-align:justify')
-  img.aligncenter.size-full.wp-image-10014(alt='Android_SVG', src='http://i2.wp.com/geekytheory.com/wp-content/uploads/2014/07/Android_SVG.png?resize=1024%2C640', style='height:481px; width:770px')
-  br
-  | El networking es vital en el mundo del software, y desde Geeky Theory siempre lo hemos incentivado y hemos intentado ser participes de ello, como todas las charlas a las que asistimos y/o las que nosotros damos. En esta clase de evento se aprenden cosas que de otra manera muy dif&iacute;cilmente podr&iacute;amos acceder o conocer.
-p(style='text-align:justify')
-  | En uno de estos evento comentaba un ponente y amigo 
-  a(href='https://plus.google.com/+TxusBallesteros', target='_blank', title='Perfil de gplus de Txus') Txus Ballesteros
-  |  la utilizaci&oacute;n de este formato de im&aacute;genes para la utilizaci&oacute;n como iconos en aplicaciones Android. La causa de la utilizaci&oacute;n de este formato es su potencia de reutilizaci&oacute;n puesto que es vectorial y no matricial.
-.alert
-  | Los que no sep&aacute;is de que va esto, resumir que un 
-  a(href='http://es.wikipedia.org/wiki/Scalable_Vector_Graphics', target='_blank', title='SVG en wikipedia') SVG
-  |  se puede considerar una funci&oacute;n, por lo que puede ser redimensionada todo lo que se quiera al no estar generada por pixeles
-p(style='text-align:justify')
-  | Para los que hab&eacute;is pasado por un desarrollo en Android un poco serio, os habr&eacute;is topado por la adaptaci&oacute;n de vuestros recursos para diferentes terminales, con la 
-  strong repetici&oacute;n del misma imagen de icono para cada una de las densidades
-  |  hdpi,mdpi,ldpi,xhdpi,&mldr; aumentando much&iacute;simo el peso de la aplicaci&oacute;n final.
-p(style='text-align:justify')
-  | Con la utilizaci&oacute;n de los SVG reducimos ese peso, y el de la RAM en muchos casos teniendo solamente un &uacute;nico recurso que ser&aacute; el SVG que reescalaremos para cada caso.
-p(style='text-align:justify')
-  | Para su utilizaci&oacute;n en Android, 
-  a(href='https://github.com/japgolly/svg-android', target='_blank', title='Librería de uso de SVG en Android') haremos uso de una librer&iacute;a
-  |  que nos facilitar&aacute; pintar &ldquo;esa funci&oacute;n&rdquo; en nuestra aplicaci&oacute;n.
-p(style='text-align:justify')
-  | La imagen SVG podremos dibujarla con cualquier editor de im&aacute;genes vectoriales, yo os aconsejo Adobe Illustrator o su homologo open source Inksacape.
-p(style='text-align:justify')
-  | Como curiosidad os paso el contenido del archivo de ejemplo, esto es lo que nos encontramos si abrimos un .svg con un editor de texto. Como podemos ver, es texto plano, &ldquo;una funci&oacute;n&rdquo; que dice como pintar la imagen.
-p Hola buenas tardes
-p Hola buenas tardes
-p Hola buenas tardes
-p Hola buenas tardes
-p Hola buenas tardes
-p Hola buenas tardes
+#slides.slides
+  .slide
+    h1 Node.JS &ndash; Primeros pasos y &ldquo;Hola Mundo&rdquo;
+    p(style='text-align:justify')
+      img.aligncenter.size-full.wp-image-4276(alt='nodejs tutorial 2', src='http://i1.wp.com/geekytheory.com/wp-content/uploads/2013/07/nodejs-tutorial-2.png?resize=400%2C300', style='height:300px; width:400px')
+    p(style='text-align:justify')
+      | &iexcl;Hola! En este tutorial comenzaremos a programar con node.js. Daremos los primeros pasos y haremos un peque&ntilde;o &ldquo;Hola Mundo&rdquo;. Para ello, tendremos que saber lo b&aacute;sico, y por ello publicamos este art&iacute;culo en Geeky Theory.
+    p(style='text-align:justify')
+      | Como ya dije en el tutorial anterior (
+      a(href='http://www.geekytheory.com/instalacion-de-nodejs/', target='_blank', title='Instalación de node.js') Instalaci&oacute;n de node.js
+      | ), la arquitectura de node.js est&aacute; orientada a eventos, es decir, que la ejecuci&oacute;n de los programas viene determinada por los sucesos que ocurran en el sistema.
+    p(style='text-align:justify')
+      | Algo muy importante a la hora de ponerse a programar, es saber hacer &ldquo;debug&rdquo; a nuestra manera. En este caso, imprimiremos mensajes por pantalla. Si hab&eacute;is programado en C o JAVA, por ejemplo, habr&eacute;is usado los 
+      em printf()
+      |  o 
+      em System.out.print()
+      |  para lanzar mensajes por consola y saber si vuestro programa se est&aacute; ejecutando adecuadamente. En este caso, utilizaremos 
+      em console.log().
+    p(style='text-align:justify') Comenzaremos abriendo una nueva consola y escribiendo:
+    #crayon-53d99f742e12b918286019.crayon-syntax.crayon-theme-github.crayon-font-monaco.crayon-os-pc.print-yes.notranslate(style='margin-top: 12px; margin-bottom: 12px; font-size: 12px ! important; line-height: 15px ! important; height: auto;')
+      .crayon-plain-wrap
+        textarea node
+      .crayon-main(style='position: relative; z-index: 1; overflow: hidden;')
+        table.crayon-table
+          tbody
+            tr
+              td
+                .crayon-nums-content(style='font-size: 12px !important; line-height: 15px !important;')
+                  .crayon-num 1
+              td
+                .crayon-pre(style='font-size: 12px !important; line-height: 15px !important;')
+                  #crayon-53d99f742e12b918286019-1.crayon-line node
+    p(style='text-align:justify')
+      | Ahora, node.js ya se est&aacute; ejecutando y, podremos utilizarlo. Para realizar una peque&ntilde;a prueba, escribiremos:
+    .crayon-plain-wrap
+      textarea console.log(&apos;Hola, Mundo!&apos;)
+    table.crayon-table
+      tbody
+        tr
+          td
+            .crayon-nums-content(style='font-size: 12px !important; line-height: 15px !important;')
+              .crayon-num 1
+          td
+            .crayon-pre(style='font-size: 12px !important; line-height: 15px !important;')
+              #crayon-53d99f742e13c331983095-1.crayon-line console.log(&apos;Hola, Mundo!&apos;)
+  .slide
+    p Y obtendremos como resultado lo siguiente:
+    p(style='text-align:center')
+      img.aligncenter.wp-image-4265(alt='Terminal_002', src='http://i0.wp.com/geekytheory.com/wp-content/uploads/2013/07/Terminal_002.png?resize=431%2C167', style='height:167px; width:431px')
+    p(style='text-align:justify')
+      | No os preocup&eacute;is, que esto no es el &ldquo;Hola Mundo&rdquo;, es demasiado f&aacute;cil para vosotros. 
+      strong Si queremos salir y parar la ejecuci&oacute;n de node.js, usaremos CTRL+C
+      | .
+    p(style='text-align:justify')
+      | En el 
+      a(href='http://www.geekytheory.com/instalacion-de-nodejs/', target='_blank') primer art&iacute;culo
+      |  sobre node.js, os dije que se basaba en Javascript. Por lo tanto, 
+      strong
+        | los archivos tendr&aacute;n una extensi&oacute;n .js (por ejemplo, 
+        em server.js
+        | )
+      | .
+    p(style='text-align:justify')
+      | Cuando hayamos creado un archivo con c&oacute;digo de node.js, por ejemplo server.js, lo ejecutaremos con la sentencia:
+    #crayon-53d99f742e143463299503.crayon-syntax.crayon-theme-github.crayon-font-monaco.crayon-os-pc.print-yes.notranslate(style='margin-top: 12px; margin-bottom: 12px; font-size: 12px ! important; line-height: 15px ! important; height: auto;')
+      .crayon-plain-wrap
+        textarea node server.js
+      .crayon-main(style='position: relative; z-index: 1; overflow: hidden;')
+        table.crayon-table
+          tbody
+            tr
+              td
+                .crayon-nums-content(style='font-size: 12px !important; line-height: 15px !important;')
+                  .crayon-num 1
+              td
+                .crayon-pre(style='font-size: 12px !important; line-height: 15px !important;')
+                  #crayon-53d99f742e143463299503-1.crayon-line node server.js
+    p(style='text-align:justify')
+      | Ahora, crearemos un archivo con el comando que acabamos de escribir y lo llamaremos holamundo.js. Lo ejecutaremos de la siguiente manera:
+  .slide
+    h1 Overview
+    p
+      img(src='/img/logo.png', alt='node')
+    ul
+      li
+        a(href='http://nodejs.org/') http://nodejs.org/
+      li
+        | Event-driven I/O framework on top of 
+        a(href='http://code.google.com/p/v8/') V8 C++ lib
+      li
+        | Bit like 
+        a(href='http://twistedmatrix.com/trac/') Twisted 
+        span  or 
+        a(href='http://rubyeventmachine.com/') EventMachine
+      li
+        | by 
+        a(href='https://twitter.com/#!/ryah') Ryan 
+        a(href='https://github.com/ry') Dahl
+      li JavaScript
+      li Includes performant, fairly low level, web server
+      li Otherwise pretty much just a way to run JavaScript outside of browsers
+  .slide
+    h1 Server-side JavaScript
+    ul
+      li Not first
+      li
+        | Netscape 
+        a(href='http://www.datacraft.com/livewire.html') LiveWire
+        span  ...  1996!
+      li
+        a(href='http://jaxer.org/') Aptana Jaxer
+      li
+        a(href='http://www.ringojs.org/') RingoJS
+      li
+        a(href='http://en.wikipedia.org/wiki/Comparison_of_server-side_JavaScript_solutions') etc.
+    .speaker RingoJS is based on Mozilla&apos;s Rhino (Java)
+  .slide
+    h1 Hype?
+    ul
+      li
+        | Fast
+        ul
+          li V8
+          li Asynchronous
+      li JavaScript
+      li
+        | Scalable
+        ul
+          li &quot;node in the cloud&quot;
+      img(src='/img/logo.png', alt='node')
+    .speaker
+      ul
+        li Fast because asynchronous
+        li Based on select system call
+        li Most web apps are I/O bound
+        li Apache does forks :(
+  .slide
+    h1 Everything* is asynchronous!
+    ul
+      li I/O! 
+      li Web apps are mostly waiting for I/O
+      li Single event loop
+    .speaker
+      ul
+        li FS and NET IO
+        li require, funcSync-funcs
+        li Rails does nothing but waits for I/O, ry
+  .slide
+    h1 Threads vs. evented
+    img(src='/img/reqs.png', alt='')
+    p
+      a(href='http://blog.webfaction.com/a-little-holiday-present') http://blog.webfaction.com/a-little-holiday-present
+    .speaker Little overhead from threads
+  .slide
+    h1 Threads vs. evented
+    img(src='/img/memory.png', alt='')
+    p
+      a(href='http://blog.webfaction.com/a-little-holiday-present') http://blog.webfaction.com/a-little-holiday-present
+    .speaker Memory matters more
+  .slide
+    h1 Scaling?
+    ul
+      li No threads
+      li
+        | Use processes!
+        ul
+          li Easy to scale out of one box
+  .slide
+    h1 Why JavaScript?
+    ul
+      li Already asynchronous mentality
+      li
+        | No burden from synchronous legacy libs
+        ul
+          li Everything just works
+          li Twisted :(
+    .speaker Python core does not work in Twisted
+  .slide
+    h1 Code!
+    pre.brush.
+      
+    p and others coming up!
+    .speaker
+      ul
+        li setTimeout Hello World
+        li Telnet webchat
+  .slide
+    h1 Fun with JavaScript?
+    ul
+      li Multiplayer game server for HTML5 games
+    .speaker On games you have to often run the game logic also on server to prevent cheating
+  .slide
+    h1 Fun with JavaScript?
+    ul
+      li
+        a(href='http://blog.learnboost.com/blog/introducing-node-canvas-server-side-html5-canvas-api/') HTML5 Canvas
+  .slide
+    h1 Fun with JavaScript?
+    ul
+      li
+        a(href='https://github.com/pgriess/node-webworker') HTML5 Web Workers
+  .slide
+    h1 Fun with JavaScript?
+    ul
+      li Server-side DOM too!
+      li
+        a(href='https://github.com/tmpvar/jsdom') jsdom
+  .slide
+    h1 Fun with JavaScript?
+    ul
+      li Server-side DOM means Server-side jQuery!
+      li
+        a(href='https://github.com/mape/node-scraper') node-scraper
+  .slide
+    h1 Fun with JavaScript?
+    ul
+      li Server-side DOM + server-side JavaScript?
+  .slide
+    h1 Fun with JavaScript?
+    ul
+      li Server-side DOM + server-side JavaScript?
+      li
+        strong Epic server-side browser!
+      li
+        a(href='http://zombie.labnotes.org/') Zombie.js
+      li
+        | Fast headless JavaScript aware acceptance-testing
+        ul
+          li Combine Zombie.js with:
+          li
+            a(href='http://vowsjs.org/') Vows
+          li
+            a(href='http://pivotal.github.com/jasmine/') Jasmine
+  .slide
+    h1 Web frameworks
+    ul
+      li
+        a(href='http://expressjs.com/') Express
+      li
+        a(href='https://github.com/joyent/node/wiki/modules#web-frameworks') Many others
+    .speaker Express is Sinatra like
+  .slide
+    h1 Persistence
+    ul
+      li Good old stuff
+      ul
+        li
+          a(href='https://github.com/felixge/node-mysql') MySQL
+        li
+          a(href='https://github.com/brianc/node-postgres') PostgreSQL
+        li
+          a(href='https://github.com/orlandov/node-sqlite') SQLite
+        li
+          a(href='https://github.com/mariano/node-db-oracle') Oracle :P
+      li
+        | JSON stores &lt;3 JavaScript
+        ul
+          li
+            a(href='https://github.com/cloudhead/cradle') CouchDB
+          li
+            a(href='http://mongoosejs.com/') MongoDB
+          li
+            a(href='https://github.com/mranney/node_redis/') Redis (JSONish)
+    .speaker Node.js users are often adventureus, so NoSQL is used a lot
+  .slide
+    h1 Real-time web!
+    ul
+      li
+        a(href='http://socket.io/') Socket.io
+  .slide
+    h1 Code!
+    ul
+      li
+        a(href='https://github.com/epeli/geekslides') These slides!
+      li Server loc &lt; 50!
+  .slide
+    h1 Socket.io
+    ul
+      li
+        a(href='https://github.com/learnboost/socket.io-spec') Specs
+      li
+        a(href='http://pypi.python.org/pypi/SocketTornad.IO/') Python port (Tornado)
+      li
+        a(href='https://github.com/tadglines/Socket.IO-Java') Java port
+  .slide
+    h1 Even easier real-time
+    ul
+      li
+        a(href='http://nowjs.com/') Nowjs
+  .slide
+    h1 or bigger
+    ul
+      li
+        a(href='https://github.com/socketstream/socketstream') SocketStream
+      li
+        a(href='http://addyosmani.com/blog/building-real-time-coffeescript-web-applications-with-socketstream/') Tutorial
+  .slide
+    h1 Weak points of Node.js
+    ul
+      li
+        a(href='http://nodejs.org/docs/v0.4.8/api/buffers.html') Binary
+      li Raw computation
+      li Business logic might get spaghetty
+      ul
+        li
+          | Some helpers 
+          a(href='https://github.com/caolan/async') Async.js
+          span , 
+          a(href='https://github.com/substack/node-seq') Seq
+    .speaker Helpers contains nice patterns
+  .slide
+    h1 Debugging
+    p
+      a(href='http://nodejs.org/docs/v0.4.8/api/debugger.html') Build-in GDB-like
+    pre.
+      \n\n$ node debug app.js            
+    p
+      a(href='https://github.com/dannycoates/node-inspector') node-inspector (webkit debugger)
+    p
+      img(src='/img/inspector.png')
+    p
+      a(href='http://www.youtube.com/watch?v=AOnK3NVnxL8') http://www.youtube.com/watch?v=AOnK3NVnxL8
+  .slide
+    h1 Tools
+    ul
+      li
+        a(href='http://npmjs.org') NPM - Node Package Manager
+      li
+        a(href='') Supervisor - Code reloading
+      li
+        a(href='https://github.com/indexzero/forever') Forever - Daemonizing
+      li
+        a(href='http://learnboost.github.com/cluster/') Cluster
+  .slide
+    h1 Installing
+    ul
+      li Compile always from sources for now
+    ul
+      li
+        a(href='http://nodejs.org/#download') Source tar balls
+    ul
+      li
+        a(href='https://github.com/joyent/node/wiki/Installation') Wiki
+    .speaker It&apos;s too old in Linux repos
+  .slide
+    h1 Hosting
+    ul
+      li Your VPS
+      li
+        a(href='https://no.de/') Joyent
+      li
+        a(href='http://devcenter.heroku.com/articles/node-js') Heroku
+      li
+        a(href='http://www.nodejitsu.com/') Nodejitsu (private beta)
+      li
+        a(href='http://arstechnica.com/microsoft/news/2011/06/nodejs-coming-to-windows-azure-with-official-microsoft-support.ars') Microsoft Azure (just announced)
+      li
+        a(href='https://github.com/joyent/node/wiki/hosting') Many others
+  .slide
+    h1 Thanks!
+    ul
+      li
+        | Slide sources: 
+        a(href='https://github.com/epeli/geekslides') https://github.com/epeli/geekslides
+script(src="/js/client.js", type="text/javascript", charset="utf-8")

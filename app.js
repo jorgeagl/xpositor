@@ -29,7 +29,7 @@ app.configure(function(){
 
 
 app.get('/', function(req, res){
-  res.render('slides.jade');
+  res.render('pagina.jade');
 });
 
 app.get('/manage', function(req, res){
@@ -42,16 +42,18 @@ app.get('/admin', function(req, res){
 
 app.post('/convert', function(req, res){
   html2jade.convertHtml(req.body.html, {bodyless:true}, function (err, jade) { //CONVERT TO JADE
-          
-    fs.appendFile('./views/pagina.jade', jade, function(err){
+  var filename='./views/pagina.jade';
+  var script = 'script(src="/js/client.js", type="text/javascript", charset="utf-8")';
+    
+    fs.writeFile(filename, jade, function(err){
       if(!err){
-        
-        res.send({success:1});
-        
-        res.end();  
+        fs.appendFile(filename, script);
+        res.send({ success:1 });
+        res.end();
       }else{
         res.send(500, { error: err });
         throw err;
+        res.end(); 
       }
     });
   });

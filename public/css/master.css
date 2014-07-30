@@ -76,9 +76,8 @@ li {
     background-color: #222222;
     position: fixed;
     padding:0 !important;
-    background-image: url('./img/body-linen.jpg');    
     background-position: left top;
-    height: 100%;
+    min-height: 100%;
 }
 
 .admin-left ul{ margin:0 !important;padding: 0 !important;}
@@ -98,26 +97,27 @@ li {
     padding: 10px !important;
 }
 
-.admin-left .activo{ 
+.admin-left .activo{
     color:#05A0CB;
     background-color: #2b2d36;
     
 }
-.admin-left li:hover:nth-child(1){
-    border: medium none #222222 !important;
-    color: #ffffff;
-}
-.admin-left li:hover{
+
+.admin-left li:hover:not(.head-admin){
     color:#05A0CB;
     background-color: #2b2d36;
     
 }
-.admin-left li{ color:#056D89; padding-left: 40px !important;}
+.admin-left li{ color:#056D89; padding-left: 40px !important; }
 
-.admin-left .add{ cursor: pointer;}
+.admin-left .add{ cursor: pointer; }
 
-.body-admin{ padding:0 !important;}
+.body-admin{ padding:0 !important; }
 
 .saveadmin{ padding:0 10px !important; }
 
-.paginas-admin{ padding:0 10px;}
+.paginas-admin{ padding:0 10px; }
+
+.preview{
+    height: 300px;overflow: auto;
+}
