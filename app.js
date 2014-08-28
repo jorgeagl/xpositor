@@ -40,6 +40,10 @@ app.get('/admin', function(req, res){
   res.render('admin.jade');
 });
 
+app.get('/draw', function(req, res){
+  res.render('draw.jade'); 
+});
+
 app.post('/convert', function(req, res){
   html2jade.convertHtml(req.body.html, {bodyless:true}, function (err, jade) { //CONVERT TO JADE
   var filename='./views/pagina.jade';
