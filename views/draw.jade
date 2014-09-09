@@ -1,2 +1,32 @@
-canvas(id="drawing")
+link(rel="stylesheet", href="/css/pizarron.css", type="text/css", media="screen", charset="utf-8")
+div(class="header")
+	table
+		tbody
+			tr
+				td
+					a(id="new", class="navbtn", onclick="newCanvas()") Nuevo
+						
+				td
+					div(class="palette blanco", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;")
+				td
+					div(class="palette gris", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;")
+				td
+					div(class="palette negro", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;")
+				td	
+					div(class="palette cafe", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;")
+				td
+					div(class="palette rojo", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;")
+				td
+					div(class="palette naranja", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;")
+				td	
+					div(class="palette amarillo", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;")
+				td
+					div(class="palette verde", onclick="selectColor(this)", style="border-color: rgb(255, 255, 255); border-style: dashed;")
+				td
+					div(class="palette azul", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;")
+				td
+					div(class="palette morado", onclick="selectColor(this)", style="border-color: rgb(119, 119, 119); border-style: solid;)
+				td
+					a(id="new", class="navbtn", onclick="cerrar()") Cerrar
+div(id="content")
 script(src="/js/draw.js", type="text/javascript", charset="utf-8")

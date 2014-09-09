@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document*/
+body { margin:0 auto; padding:0; font-family: 'Roboto', sans-serif; font-size:12px; color:#FFF;
+
+  background: #f6f6f6 url(../img/fondo.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   }
+  img { border:0; }
+body,td,th {   }
+a { transition-duration: 0.2s; -webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; text-decoration:none; }
+
+.contenedor { display: inline-block; float:left; width:100%; margin:0; text-align:center; padding: 0; }
+.contenedor_x { display:inline-block; width:1200px; margin:auto; text-align:center; }
+
+
+.menu1 { display:inline-block; width:100%; height:96px; background:url(../img/menu_off.jpg); text-align:center; color:#FFF; float:left; cursor:pointer; position:relative;}
+
+.sub { display:inline-block; height:25px; background:url(../img/sub_off.jpg); text-align:center; color:#FFF; float:left; cursor:pointer; padding:10px 20px; 
+border-top:2px solid #FFF; 
+border-bottom:2px solid #FFF; 
+border-left:1px solid #FFF; 
+border-right:1px solid #FFF; 
+font-size:20px;}
+
+/*.menu1:hover { background:url(../img/menu_on.jpg); color:#ff4612; }
+.sub:hover { background:url(../img/sub_on.jpg); color:#fff; }*/
+
+.menu_top { color:#000; text-decoration:underline; font-size:18px; }
+
+
+table { border-collapse: collapse; }
+
+.btn_act { color:#fff; display:inline-block; padding:10px 15px; background:#999; }
+.btn_act:hover {  background:#fe4a27; }
+
+
+.btn_doc { color:#414042; }
+.btn_doc:hover { color:#f1572b; }
+
+
+/**/
+
+body { margin:0px; width:100%; height:100%; overflow:hidden;
+    /* prevent text selection on ui */
+    user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;
+    /* prevent scrolling in windows phone */
+    -ms-touch-action: none;
+    /* prevent selection highlight */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+        
+.header { position: absolute; top: 0px; left: 0px; right: 0px; height: 47px; padding:6px; background:#000; z-index:9999;  }
+.navbtn { cursor: pointer; float:left; padding: 6px 10px; font-weight: bold; line-height: 18px; font-size: 14px; color: #eee; text-shadow: 0px -1px #000; border: solid 1px #111; border-radius: 4px; background-color: #404040; box-shadow: 0 0 1px 1px #555,inset 0 1px 0 0 #666;       }
+.navbtn-hover, .navbtn:active { color: #222; text-shadow: 0px 1px #aaa; background-color: #aaa; box-shadow: 0 0 1px 1px #444,inset 0 1px 0 0 #ccc;     }
+#content{ position: absolute; top: 0; left: 0px; overflow:hidden; background-color:#ddd;  }
+#canvas{ cursor:crosshair ; background-color:#fff;  }
+.palette { border:2px solid #777; height:30px; width:30px;   }
+.blanco{ background-color:#fff;  }
+.gris{ background-color:#999;  }
+.negro{ background-color:#000; border:2px dashed #fff;  }
+.cafe{ background-color:#630;  }
+.rojo{ background-color:#F00;  }
+.naranja{ background-color:#F60;  }
+.amarillo{ background-color:#FC0;  }
+.verde{ background-color:#060;  }
+.azul{ background-color:#39F;  }
+.morado{ background-color:#639;  }
+
+
+
+.ini1 { display:inline-block; position:absolute; left:68px; top:126px; }
+.ini2 { display:inline-block; position:absolute; left:68px; top:210px; font-size:24px; font-style:italic; color:#f1562a; font-family: 'Roboto', sans-serif; }
+.inicio_div {display:none; width:1200px; height:672px; position:absolute; overflow:hidden; }
+.fuente1 { font-size: 20px; }
+.cob { display:inline-block; width:1120px; }
+.cob1 { display:inline-block; width:700px; height:500px; float:left; }
+.cob_map { width:672px; }
+
+
+.econo { display:none; width:1200px; height:672px; position:absolute; text-align:center; }
+.econo1 { display:inline-block; width:1100px; font-size:18px; color:#414042; font-weight:700; }
+
+.celdas { border-right: 2px solid #fe4a27; border-left: 2px solid #fe4a27; width:110px; color: #fe4a27; font-size:15px; text-align:right; }
+.celdast { border-right: 2px solid #fe4a27; border-left: 2px solid #fe4a27; background: #bcbdc1; color:#FFF; width:110px; color: #fe4a27; font-size:12px; text-align:right; }
+
+.fl_c { display:inline-block; border:none; background:none; width:90px; text-align:right; font-size:18px; }
+.fl_cm { display:inline-block; border:none; background:none; width:90px; text-align:right; border-right: 1px solid #CCC; border-bottom: 1px solid #CCC; font-size:18px; }
+
+.eco1 { width:562px; padding:10px 15px; background:url(../img/calc_bg.jpg); display:inline-block; float:left; margin: 0; }
+.eco2 { width:450px; padding:10px 15px; background:url(../img/calc_bg1.jpg); display:inline-block; float:left; margin: 0 0 0 18px; }
+
+.eco0 { display:inline-block; width:1100px; font-size:18px; color:#414042; font-weight:700; }
+.eco_sg { position:absolute; left:1100px; top:120px; }
+.eco_tr { position:absolute; left:-45px; top:120px; }
+
+.sal1 { display:inline-block; position:absolute; left:68px; top:30px; font-size:60px; font-weight:700; color:#414042; font-family: 'Roboto', sans-serif; padding:0; }
+.sal2 { display:inline-block; position:absolute; left:68px; top:80px; font-size:120px; font-style:italic; color:#414042; font-family: 'Roboto', sans-serif; padding:0; }
+.sal3 { display:inline-block; position:absolute; left:68px; top:210px; font-size:65px; font-weight:700; color:#ff4612; font-family: 'Roboto', sans-serif; padding:0; }
+.sal4 { display:inline-block; position:absolute; left:710px; top:400px; }
+
+@media (max-width:1050px){
+	
+.sal1 { display:inline-block; position:absolute; left:68px; top:30px; font-size:55px; font-weight:700; color:#414042; font-family: 'Roboto', sans-serif; padding: 0 0 0 60px; }
+.sal2 { display:inline-block; position:absolute; left:68px; top:80px; font-size:100px; font-style:italic; color:#414042; font-family: 'Roboto', sans-serif; padding: 0 0 0 60px; }
+.sal3 { display:inline-block; position:absolute; left:68px; top:210px; font-size:60px; font-weight:700; color:#ff4612; font-family: 'Roboto', sans-serif; padding: 0 0 0 60px; }
+.sal4 { display:inline-block; position:absolute; left:660px; top:400px; }
+
+.eco_sg { position:absolute; left:960px; top:120px; }
+.eco_tr { position:absolute; left:-10px; top:120px; }
+
+.eco0 { display:inline-block; width:1000px; font-size:18px; color:#414042; font-weight:700; }
+.eco1 { width:462px; padding:10px 15px; background:url(../img/calc_bg.jpg); display:inline-block; float:left;  margin: 0 0 0 40px; }
+.eco2 { width:370px; padding:10px 15px; background:url(../img/calc_bg1.jpg); display:inline-block; float:left; margin: 0 0 0 18px; }
+
+.celdas { border-right: 2px solid #fe4a27; border-left: 2px solid #fe4a27; width:90px; color: #fe4a27; font-size:12px; text-align:right; }
+.celdast { border-right: 2px solid #fe4a27; border-left: 2px solid #fe4a27; background: #bcbdc1; color:#FFF; width:90px; color: #fe4a27; font-size:12px; text-align:right; }
+
+.fl_c { display:inline-block; border:none; background:none; width:70px; text-align:right; font-size:13px; }
+.fl_cm { display:inline-block; border:none; background:none; width:70px; text-align:right; border-right: 1px solid #CCC; border-bottom: 1px solid #CCC; font-size:13px; }
+
+.econo { display:none; width:1000px; height:672px; position:absolute; text-align:center; margin: 0 100px; }
+.econo1 { display:inline-block; width:1000px; font-size:18px; color:#414042; font-weight:700; }
+
+.cob { display:inline-block; width:1000px; }
+.cob1 { display:inline-block; width:580px; height:500px; float:left; }
+.cob_map { width:550px; }
+.ini1 { display:inline-block; position:absolute; left:168px; top:126px; }
+.ini2 { display:inline-block; position:absolute; left:68px; top:210px; font-size:24px; font-style:italic; color:#f1562a; font-family: 'Roboto', sans-serif; padding: 0 0 0 100px; }
+.inicio_div {display:none; width:100%; height:672px; position:absolute; overflow:hidden; }
+.fuente1 { font-size: 17px; }
+}
