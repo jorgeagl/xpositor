@@ -70,22 +70,28 @@ var lastSlideId = 1;
 
 var slidesSockets = io.of("/slides");
 var manageSockets = io.of("/manage");
+var board = io.of('/draw');
 
 manageSockets.on("connection", function(socket) {
-
+  
   socket.on("changeto", function(slideId) {
     lastSlideId = slideId;
     slidesSockets.emit("changeto", slideId);
   });
-
 });
-
-
 
 slidesSockets.on("connection", function(socket) {
   socket.emit("startfrom", lastSlideId);
 });
 
+io.sockets.on('connection', function (socket) {
+  //socket.emit('news', { hello: 'Chupas' });
+  
+  socket.on('send', function (data) {
+
+    io.sockets.emit('sendto', {  draw : data });
+  });
+});
 
 
 app.listen(19645);

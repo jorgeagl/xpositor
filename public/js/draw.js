@@ -35,8 +35,22 @@ canvas.addEventListener('mouseup', disengage);
 
 */
 
-var ctx, color = "#000";	
-document.addEventListener( "DOMContentLoaded", function(){ setTimeout(function(){ newCanvas(); }, 1000); }, false );
+var ctx, color = "#000";
+var socket = io.connect('http://localhost:19645');
+console.log(socket);
+document.addEventListener( "DOMContentLoaded", function(){ 
+	setTimeout(function(){ 
+		newCanvas();
+		
+		/*socket.on('news', function (data) {
+		    console.log(data);
+		    //socket.emit('my other event', { my: 'data' });
+		});*/
+
+		
+
+	}, 1000); 
+}, false );
 
 function newCanvas(){
     document.getElementById("content").style.height = window.innerHeight-0;
@@ -48,6 +62,7 @@ function newCanvas(){
     drawTouch();
     drawPointer();
 	drawMouse();
+	
 }
         
 function selectColor(el){
@@ -89,6 +104,7 @@ var drawPointer = function() {
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
+		console.log('movimiento');
 		e.preventDefault();
         e = e.originalEvent;
 		x = e.pageX;
@@ -103,12 +119,14 @@ var drawPointer = function() {
 // prototype to	start drawing on mouse using canvas moveTo and lineTo
 var drawMouse = function() {
 	var clicked = 0;
+
 	var start = function(e) {
 		clicked = 1;
 		ctx.beginPath();
 		x = e.pageX;
 		y = e.pageY-3;
 		ctx.moveTo(x,y);
+		socket.emit('send', { xm: x, ym:y});
 	};
 	var move = function(e) {
 		if(clicked){
@@ -116,6 +134,7 @@ var drawMouse = function() {
 			y = e.pageY-3;
 			ctx.lineTo(x,y);
 			ctx.stroke();
+			socket.emit('send', { x: x, y:y, color:color });
 		}
 	};
 	var stop = function(e) {
@@ -124,4 +143,15 @@ var drawMouse = function() {
     document.getElementById("canvas").addEventListener("mousedown", start, false);
 	document.getElementById("canvas").addEventListener("mousemove", move, false);
 	document.addEventListener("mouseup", stop, false);
+
+	socket.on('sendto', function(draw){
+				
+				ctx.moveTo(draw.draw.xm,draw.draw.ym);
+				ctx.strokeStyle = draw.draw.color;
+				ctx.lineTo(draw.draw.x,draw.draw.y);
+				ctx.stroke();
+
+				
+			});
+
 };
