@@ -1,9 +1,53 @@
+/*var canvas = document.getElementById('drawing');
+var context = canvas.getContext('2d');
+
+var radius = 10;
+var dragging = false;
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+context.lineWidth= radius*2;
+
+var putPoint = function(e){
+	if(dragging){
+		context.lineTo(e.clientX, e.clientY);
+		//context.stroke();
+		context.beginPath();
+		context.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
+		context.fill();
+		context.beginPath();
+		context.moveTo(e.clientX, e.clientY);
+	}
+}
+
+var engage = function(e){
+	dragging = true;
+	putPoint(e);
+}
+var disengage = function(e){
+	dragging = false;
+}
+
+canvas.addEventListener('mousedown', engage);
+canvas.addEventListener('mousemove', putPoint);
+canvas.addEventListener('mouseup', disengage);
+
+*/
+
 var ctx, color = "#000";
 var socket = io.connect('http://localhost:19645');
 console.log(socket);
 document.addEventListener( "DOMContentLoaded", function(){ 
 	setTimeout(function(){ 
 		newCanvas();
+		
+		/*socket.on('news', function (data) {
+		    console.log(data);
+		    //socket.emit('my other event', { my: 'data' });
+		});*/
+
+		
 
 	}, 1000); 
 }, false );
@@ -39,7 +83,6 @@ var drawTouch = function() {
 		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY-3;
 		ctx.moveTo(x,y);
-		socket.emit('send', { xm: x, ym:y});
 	};
 	var move = function(e) {
 		e.preventDefault();
@@ -47,7 +90,6 @@ var drawTouch = function() {
 		y = e.changedTouches[0].pageY-3;
 		ctx.lineTo(x,y);
 		ctx.stroke();
-		socket.emit('send', { x: x, y:y, color:color });
 	};
     document.getElementById("canvas").addEventListener("touchstart", start, false);
 	document.getElementById("canvas").addEventListener("touchmove", move, false);
@@ -60,7 +102,6 @@ var drawPointer = function() {
 		x = e.pageX;
 		y = e.pageY-3;
 		ctx.moveTo(x,y);
-		socket.emit('send', { xm: x, ym:y});
 	};
 	var move = function(e) {
 		console.log('movimiento');
@@ -70,7 +111,6 @@ var drawPointer = function() {
 		y = e.pageY-3;
 		ctx.lineTo(x,y);
 		ctx.stroke();
-		socket.emit('send', { x: x, y:y, color:color });
     };
     document.getElementById("canvas").addEventListener("MSPointerDown", start, false);
 	document.getElementById("canvas").addEventListener("MSPointerMove", move, false);
@@ -103,12 +143,15 @@ var drawMouse = function() {
     document.getElementById("canvas").addEventListener("mousedown", start, false);
 	document.getElementById("canvas").addEventListener("mousemove", move, false);
 	document.addEventListener("mouseup", stop, false);
-};
 
-socket.on('sendto', function(draw){
+	socket.on('sendto', function(draw){
 				
 				ctx.moveTo(draw.draw.xm,draw.draw.ym);
 				ctx.strokeStyle = draw.draw.color;
 				ctx.lineTo(draw.draw.x,draw.draw.y);
 				ctx.stroke();
+
+				
 			});
+
+};
