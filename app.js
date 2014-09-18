@@ -94,5 +94,5 @@ io.sockets.on('connection', function (socket) {
 });
 
 
-app.listen(19645);
-console.log("Listening on localhost:19645");
+app.listen(3030);
+console.log("Listening on localhost:3030");
