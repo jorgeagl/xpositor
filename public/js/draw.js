@@ -17,7 +17,7 @@ function newCanvas(){
     drawTouch();
     drawPointer();
 	drawMouse();
-	//socket.emit('sendnew');
+	socket.emit('sendnew');
 }
         
 function selectColor(el){
@@ -109,7 +109,6 @@ var drawMouse = function() {
 			});
 
 	socket.on('colorto', function(color){
-		
 		ctx.beginPath();
     	ctx.strokeStyle = color.color;
 	});

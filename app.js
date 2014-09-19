@@ -87,18 +87,18 @@ slidesSockets.on("connection", function(socket) {
 //PIZZARRON
 io.sockets.on('connection', function (socket) {
   
-  //MOVE
-  socket.on('send', function (data) {
+//MOVE
+socket.on('send', function (data) {
     io.sockets.emit('sendto', {  draw : data });
-  });
-  //CHANGE COLOR
-  socket.on('sendColor', function(color){
+});
+//CHANGE COLOR
+socket.on('sendColor', function(color){
     io.sockets.emit('colorto', color);
-  });
-  //NEW 
-  socket.on('sendnew', function(){
+});
+//NEW 
+socket.on('sendnew', function(){
     io.sockets.emit('newto');
-  })
+})
     
   
 });
